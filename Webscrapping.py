@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 #import faster_than_requests as request
 
 # load data
-datadir = '/Capstone_data'
+datadir = '/data'
 data = pd.read_stata(datadir+"/all_deals.dta")
 
 # drop duplicates
