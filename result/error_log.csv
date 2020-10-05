@@ -1,0 +1,178 @@
+id,website,year,timestamp,error,detailed_error
+94906.0,www.silk.co,2011.0,2020-10-05 11:53:56.084128,soup is None,
+95790.0,www.educreations.com,2011.0,2020-10-05 11:55:44.822562,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+95790.0,www.educreations.com,2011.0,2020-10-05 11:56:54.798390,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+95799.0,www.beautylish.com,2011.0,2020-10-05 12:00:19.608688,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+95799.0,www.beautylish.com,2011.0,2020-10-05 12:00:47.187925,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+95799.0,www.beautylish.com,2011.0,2020-10-05 12:01:39.589653,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+95799.0,www.beautylish.com,2011.0,2020-10-05 12:02:03.313198,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+95799.0,www.beautylish.com,2011.0,2020-10-05 12:02:18.607769,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+95799.0,www.beautylish.com,2011.0,2020-10-05 12:05:04.140486,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+95799.0,www.beautylish.com,2011.0,2020-10-05 12:05:19.468849,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+95799.0,www.beautylish.com,2011.0,2020-10-05 12:05:45.955305,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+95799.0,www.beautylish.com,2011.0,2020-10-05 12:07:01.876848,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+95799.0,www.beautylish.com,2011.0,2020-10-05 12:07:19.381341,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+95799.0,www.beautylish.com,2011.0,2020-10-05 12:08:04.079266,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+95799.0,www.beautylish.com,2011.0,2020-10-05 12:08:19.357466,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+95799.0,www.beautylish.com,2011.0,2020-10-05 12:11:25.852311,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+95799.0,www.beautylish.com,2011.0,2020-10-05 12:11:41.172091,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+95799.0,www.beautylish.com,2011.0,2020-10-05 12:11:59.138249,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+96263.0,www.vicarious.com,2011.0,2020-10-05 12:16:16.692555,Text is to short,
+96794.0,www.demyst.com,2011.0,2020-10-05 12:18:35.838783,soup is None,
+97382.0,www.incrowdnow.com,2011.0,2020-10-05 12:19:04.926522,getSoup,Exceeded 30 redirects.
+97382.0,www.incrowdnow.com,2011.0,2020-10-05 12:19:04.930513,soup is None,
+97785.0,www.sosh.com,2011.0,2020-10-05 12:21:37.390237,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+97785.0,www.sosh.com,2011.0,2020-10-05 12:21:37.393234,soup is None,
+98558.0,www.mapbox.com,2011.0,2020-10-05 12:22:24.935969,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+98558.0,www.mapbox.com,2011.0,2020-10-05 12:24:21.060776,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+98672.0,www.groundmetrics.com,2011.0,2020-10-05 12:25:12.440364,soup is None,
+98861.0,www.genesismedia.com,2011.0,2020-10-05 12:25:26.568074,Text is to short,
+99105.0,www.myvr.com,2011.0,2020-10-05 12:25:32.286310,soup is None,
+99473.0,http://www.tesora.com,2011.0,2020-10-05 12:25:46.484665,Text is to short,
+99961.0,www.vitriflex.com,2011.0,2020-10-05 12:30:11.594181,soup is None,
+100059.0,www.eggcartel.com,2011.0,2020-10-05 12:35:15.359053,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+100059.0,www.eggcartel.com,2011.0,2020-10-05 12:35:34.766225,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+100059.0,www.eggcartel.com,2011.0,2020-10-05 12:40:38.600285,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+100841.0,www.bidgely.com,2011.0,2020-10-05 12:52:11.145814,soup is None,
+101942.0,www.slice.com,2011.0,2020-10-05 12:55:18.692458,soup is None,
+101960.0,www.instartlogic.com,2011.0,2020-10-05 12:55:26.425866,soup is None,
+102167.0,www.mazsystems.com,2011.0,2020-10-05 12:55:32.345498,soup is None,
+102357.0,www.balancedpayments.com,2011.0,2020-10-05 12:55:51.819206,soup is None,
+102364.0,www.chromatik.com,2011.0,2020-10-05 12:55:59.417551,soup is None,
+103436.0,www.modmed.com,2011.0,2020-10-05 12:59:55.802575,Text is to short,
+103614.0,www.sensity.com,2011.0,2020-10-05 13:01:59.868620,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+103614.0,www.sensity.com,2011.0,2020-10-05 13:04:37.875061,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+103614.0,www.sensity.com,2011.0,2020-10-05 13:05:26.230504,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+103614.0,www.sensity.com,2011.0,2020-10-05 13:05:41.578822,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+103614.0,www.sensity.com,2011.0,2020-10-05 13:06:28.688146,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+103614.0,www.sensity.com,2011.0,2020-10-05 13:09:21.124366,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+103614.0,www.sensity.com,2011.0,2020-10-05 13:11:01.045176,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+103614.0,www.sensity.com,2011.0,2020-10-05 13:12:41.576774,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+103955.0,www.brightlightsystems.com,2011.0,2020-10-05 13:20:39.777242,Text is to short,
+104210.0,www.global.thoughtfulmedia.com,2011.0,2020-10-05 13:20:45.453059,soup is None,
+104382.0,www.ifttt.com,2011.0,2020-10-05 13:22:03.295630,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+104382.0,www.ifttt.com,2011.0,2020-10-05 13:22:57.300974,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+106100.0,www.trueoffice.com,2011.0,2020-10-05 13:26:21.894950,Text is to short,
+106657.0,www.umeqo.com,2011.0,2020-10-05 13:26:48.068833,soup is None,
+106767.0,www.blabpredicts.com,2011.0,2020-10-05 13:26:53.711424,soup is None,
+107131.0,www.corvium.com,2011.0,2020-10-05 13:27:38.359011,soup is None,
+107139.0,www.aditazz.com,2011.0,2020-10-05 13:28:02.397228,Text is to short,
+107176.0,www.triprental.com,2011.0,2020-10-05 13:28:08.281787,soup is None,
+107220.0,www.intrepid.io,2011.0,2020-10-05 13:28:14.013299,soup is None,
+107255.0,www.axcellahealth.com,2011.0,2020-10-05 13:28:39.185197,soup is None,
+108083.0,www.nexmo.com,2011.0,2020-10-05 13:29:49.747247,getSoup,Exceeded 30 redirects.
+108083.0,www.nexmo.com,2011.0,2020-10-05 13:30:20.830745,getSoup,Exceeded 30 redirects.
+108379.0,www.eatstreet.com,2011.0,2020-10-05 13:32:15.698381,soup is None,
+108600.0,www.sonar.me,2011.0,2020-10-05 13:32:29.370709,Text is to short,
+108764.0,www.cloudfactory.com,2011.0,2020-10-05 13:32:44.136546,Text is to short,
+109008.0,www.concertgenetics.com,2011.0,2020-10-05 13:32:49.815483,soup is None,
+109132.0,www.swaymedical.com,2011.0,2020-10-05 13:32:55.451409,soup is None,
+110219.0,www.genapsys.com,2011.0,2020-10-05 13:33:30.728785,soup is None,
+110725.0,www.marqeta.com,2011.0,2020-10-05 13:33:59.607245,Text is to short,
+110836.0,www.propellerhealth.com,2011.0,2020-10-05 13:34:05.187369,soup is None,
+111309.0,www.bypassmobile.com,2011.0,2020-10-05 13:34:11.279533,soup is None,
+112058.0,www.infer.com,2011.0,2020-10-05 13:40:57.039845,Text is to short,
+112592.0,www.jumpbikes.com,2011.0,2020-10-05 13:41:23.956081,target_date,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=5)"
+112592.0,www.jumpbikes.com,2011.0,2020-10-05 13:41:23.961120,soup is None,
+112899.0,www.adtile.me,2011.0,2020-10-05 13:43:28.827651,soup is None,
+113671.0,www.neverware.com,2011.0,2020-10-05 13:44:28.568982,Text is to short,
+114623.0,www.daqri.com,2011.0,2020-10-05 13:46:39.824413,Text is to short,
+114890.0,www.finomial.com,2011.0,2020-10-05 13:47:42.582187,Text is to short,
+114897.0,www.greengoose.com,2011.0,2020-10-05 13:47:56.147720,Text is to short,
+115057.0,www.anki.com,2011.0,2020-10-05 13:48:11.439793,Text is to short,
+115171.0,www.tabtor.com,2011.0,2020-10-05 13:48:17.170692,soup is None,
+116036.0,www.conveyiq.com,2011.0,2020-10-05 13:48:22.777403,soup is None,
+116999.0,www.workfusion.com,2011.0,2020-10-05 13:48:28.727118,soup is None,
+117203.0,www.smartcommerce.co,2011.0,2020-10-05 13:48:34.412462,soup is None,
+118303.0,www.eponymous.co,2011.0,2020-10-05 13:50:11.369176,soup is None,
+118505.0,www.zeel.com,2011.0,2020-10-05 13:55:25.247375,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+121301.0,www.brand.live,2011.0,2020-10-05 14:09:54.986323,soup is None,
+122379.0,www.angel.co,2011.0,2020-10-05 14:13:13.022983,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+122379.0,www.angel.co,2011.0,2020-10-05 14:14:27.770705,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+122379.0,www.angel.co,2011.0,2020-10-05 14:20:25.294721,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+122379.0,www.angel.co,2011.0,2020-10-05 14:23:19.063357,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+123049.0,www.quri.com,2011.0,2020-10-05 14:23:56.745456,soup is None,
+123788.0,www.airpush.com,2011.0,2020-10-05 14:24:11.191710,Text is to short,
+125562.0,www.adialpharma.com,2011.0,2020-10-05 14:30:48.974670,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+126748.0,www.apartmentlist.com,2011.0,2020-10-05 14:32:28.220353,soup is None,
+128808.0,www.simpli.fi,2011.0,2020-10-05 14:39:36.295173,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+129092.0,www.nanotronicsimaging.com,2011.0,2020-10-05 14:42:23.343646,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+129116.0,www.shyftanalytics.com,2011.0,2020-10-05 14:42:59.171601,soup is None,
+130158.0,www.sworkit.com,2011.0,2020-10-05 14:43:06.218759,soup is None,
+130531.0,www.chnl.it,2011.0,2020-10-05 14:47:14.273220,soup is None,
+130767.0,www.uplandsoftware.com,2011.0,2020-10-05 14:47:19.923023,soup is None,
+131954.0,www.simpleenergy.com,2011.0,2020-10-05 14:47:36.871360,Text is to short,
+133469.0,www.blueconic.com,2011.0,2020-10-05 14:50:23.553332,soup is None,
+133545.0,www.codeship.com,2011.0,2020-10-05 14:50:37.119332,Text is to short,
+134161.0,www.smarterhq.com,2011.0,2020-10-05 14:50:43.614493,soup is None,
+134174.0,www.mamamancinis.com,2011.0,2020-10-05 14:52:41.370590,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+134174.0,www.mamamancinis.com,2011.0,2020-10-05 14:53:05.374912,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+134558.0,www.unikey.com,2011.0,2020-10-05 14:54:53.285558,soup is None,
+135781.0,www.kigokitchen.com,2011.0,2020-10-05 14:55:14.570929,soup is None,
+136451.0,www.flexengage.com,2011.0,2020-10-05 14:57:16.593513,soup is None,
+137577.0,www.openfin.co,2011.0,2020-10-05 14:57:22.199120,soup is None,
+138906.0,www.crowdrise.com,2011.0,2020-10-05 15:01:03.663540,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+138943.0,www.upskill.io,2011.0,2020-10-05 15:13:00.522893,soup is None,
+139575.0,www.bighealth.com,2011.0,2020-10-05 15:13:21.748882,soup is None,
+139877.0,www.liquifix.com,2011.0,2020-10-05 15:13:34.865859,Text is to short,
+139902.0,www.merchantatlas.com,2011.0,2020-10-05 15:13:40.477625,soup is None,
+140034.0,www.canvs.tv,2011.0,2020-10-05 15:14:30.519738,soup is None,
+140195.0,www.dubset.com,2011.0,2020-10-05 15:22:33.275251,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+140195.0,www.dubset.com,2011.0,2020-10-05 15:36:05.203789,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+141005.0,www.coherus.com,2011.0,2020-10-05 15:39:29.508553,Text is to short,
+141257.0,www.edgeintelligence.com,2011.0,2020-10-05 15:41:36.379146,Text is to short,
+141680.0,www.aver.io,2011.0,2020-10-05 15:41:42.999471,soup is None,
+142193.0,www.welltrackone.co,2011.0,2020-10-05 15:41:48.599237,soup is None,
+143567.0,www.repsly.com,2011.0,2020-10-05 15:43:48.146098,soup is None,
+143838.0,www.iecrowd.com,2011.0,2020-10-05 15:43:53.704405,soup is None,
+145998.0,www.aquicore.com,2011.0,2020-10-05 15:47:48.881653,soup is None,
+146327.0,www.sensoriafitness.com,2011.0,2020-10-05 15:50:29.995282,soup is None,
+146478.0,www.cardiacinsightinc.com,2011.0,2020-10-05 15:50:35.628151,soup is None,
+146923.0,www.mailigen.com,2011.0,2020-10-05 15:51:59.014415,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+146923.0,www.mailigen.com,2011.0,2020-10-05 15:52:24.549850,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+146999.0,www.snowshoestamp.com,2011.0,2020-10-05 15:53:47.938204,soup is None,
+148281.0,www.genevahealthsolutions.com,2011.0,2020-10-05 15:54:07.968420,soup is None,
+149151.0,http://pages.myredcap.com,2011.0,2020-10-05 15:54:26.816949,soup is None,
+153841.0,www.tipalti.com,2011.0,2020-10-05 16:20:42.169503,Text is to short,
+155178.0,www.kidizen.com,2011.0,2020-10-05 16:21:18.821745,soup is None,
+155260.0,www.barberwindturbines.com,2011.0,2020-10-05 16:22:08.161981,soup is None,
+155870.0,www.cuehealth.com,2011.0,2020-10-05 16:23:00.192265,soup is None,
+156524.0,www.drinkspindrift.com,2011.0,2020-10-05 16:27:30.178621,soup is None,
+158905.0,www.caremerge.com,2011.0,2020-10-05 16:30:21.068847,Text is to short,
+159464.0,www.ariacv.com,2011.0,2020-10-05 16:30:26.677725,soup is None,
+160679.0,www.stockpile.com,2011.0,2020-10-05 16:32:52.350277,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+160679.0,www.stockpile.com,2011.0,2020-10-05 16:32:52.354131,Text is to short,
+161325.0,www.vmob.com,2011.0,2020-10-05 16:33:35.480134,Text is to short,
+162383.0,www.resilinc.com,2011.0,2020-10-05 16:37:46.871538,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+162470.0,www.rediq.io,2011.0,2020-10-05 16:37:52.686260,soup is None,
+162856.0,www.edtrips.com,2011.0,2020-10-05 16:40:22.240801,soup is None,
+164167.0,www.achieveit.com,2011.0,2020-10-05 16:40:45.527800,soup is None,
+165407.0,www.yumm.com,2011.0,2020-10-05 16:43:21.793665,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:43:37.123392,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:44:09.166251,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:44:24.575874,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:44:39.874933,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:45:31.220946,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:45:55.671629,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:46:29.967548,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:47:29.493672,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:47:45.144821,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:48:09.895113,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:48:31.197454,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:48:52.744656,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:49:08.139753,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:49:23.468746,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:50:08.263021,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:50:39.113135,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:51:16.828104,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:51:40.727875,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:52:11.981443,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:52:35.396847,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:52:50.823345,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:53:23.862255,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+165407.0,www.yumm.com,2011.0,2020-10-05 16:53:59.015996,getSoup,"HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=10)"
+167759.0,www.explaineverything.com,2011.0,2020-10-05 17:03:20.199062,Text is to short,
+169441.0,www.sqream.com,2011.0,2020-10-05 17:03:53.667814,Text is to short,
+170128.0,www.boardontrack.com,2011.0,2020-10-05 17:05:22.827399,soup is None,
+171458.0,www.shiftmobility.com,2011.0,2020-10-05 17:05:28.522990,soup is None,
+172291.0,www.zenoti.com,2011.0,2020-10-05 17:05:47.270017,soup is None,
