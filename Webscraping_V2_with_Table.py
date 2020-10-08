@@ -20,8 +20,9 @@ import matplotlib.pyplot as plt
 
 
 # load data
-datadir = 'data'
-data = pd.read_stata(datadir+"/all_deals.dta")
+#for EC2 worker use
+#datadir = 'data'
+data = pd.read_stata("all_deals.dta")
 
 # drop duplicates
 df_unique = data.drop_duplicates(["portfoliocompanyid"],keep="first")
