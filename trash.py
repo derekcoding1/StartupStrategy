@@ -27,6 +27,59 @@ trash.append("Is this your domain? Add hosting, email and more.")
 trash.append("Want to buy this domain? Our Domain Buy Service can help you get it.")
 trash.append("Visit GoDaddy.com for:  New product releases")
 
+
+### Include more generic trash
+
+trash.append("This page is available on the web")
+trash.append("Wayback Machine requires your browser to support JavaScript")
+trash.append("Wayback Machine has not archived that URL")
+trash.append("page is not available on the web")
+trash.append("page is provided courtesy of GoDaddy.com")
+trash.append("Visit GoDaddy.com")
+trash.append("Click here to search for all archived pages under")
+trash.append("there are no results for your search.Search again")
+trash.append("there are no results for your search")
+trash.append("no results for your search")
+trash.append("page does not exist")
+trash.append("Wayback Machine is an initiative of the Internet Archive")
+trash.append("Search the Wayback Machine")
+trash.append("search the Wayback Machine")
+trash.append("This URL has been excluded from the Wayback Machine")
+trash.append("Sorry.  This URL has been excluded from the Wayback Machine")
+trash.append("Search the history of over 351 billion web pages on the Internet")
+trash.append("Is this your domain?")
+trash.append("Want to buy this domain?")
+trash.append("Server Error in")
+trash.append("HTTP Error 404")
+trash.append("http error 404")
+trash.append("Error 404")
+trash.append("ERROR 404")
+trash.append("http error 404 not found")
+trash.append("something's gone wrong")
+trash.append("Help make the Wayback Machine more complete!")
+
+
+### Trash Privacy Policy  & Terms of service and others
+
+
+#trash.append("WEBSITE TERMS OF USE")
+#trash.append("website terms of use")
+#trash.append("Terms of Use Agreement")
+#trash.append("TERMS OF SERVICE are")
+#trash.append("terms of service are")
+#trash.append("website terms of service")
+#trash.append("WEBSITE TERMS OF SERVICE")
+#trash.append("Terms of Use are")
+
+#trash.append("Digital Millennium Copyright Act")
+#trash.append("Notification of Claimed Infringement")
+#trash.append("copyright infringement")
+
+#trash.append("Privacy Policy applies")
+#trash.append("Privacy Policy to inform")
+
+
+
 def isTrash(content):
 	for t in trash:
 		if t in content:
