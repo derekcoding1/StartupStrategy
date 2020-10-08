@@ -62,21 +62,21 @@ trash.append("Help make the Wayback Machine more complete!")
 ### Trash Privacy Policy  & Terms of service and others
 
 
-#trash.append("WEBSITE TERMS OF USE")
-#trash.append("website terms of use")
-#trash.append("Terms of Use Agreement")
-#trash.append("TERMS OF SERVICE are")
-#trash.append("terms of service are")
-#trash.append("website terms of service")
-#trash.append("WEBSITE TERMS OF SERVICE")
-#trash.append("Terms of Use are")
+trash.append("WEBSITE TERMS OF USE")
+trash.append("website terms of use")
+trash.append("Terms of Use Agreement")
+trash.append("TERMS OF SERVICE are")
+trash.append("terms of service are")
+trash.append("website terms of service")
+trash.append("WEBSITE TERMS OF SERVICE")
+trash.append("Terms of Use are")
 
-#trash.append("Digital Millennium Copyright Act")
-#trash.append("Notification of Claimed Infringement")
-#trash.append("copyright infringement")
+trash.append("Digital Millennium Copyright Act")
+trash.append("Notification of Claimed Infringement")
+trash.append("copyright infringement")
 
-#trash.append("Privacy Policy applies")
-#trash.append("Privacy Policy to inform")
+trash.append("Privacy Policy applies")
+trash.append("Privacy Policy to inform")
 
 
 
