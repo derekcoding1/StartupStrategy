@@ -288,7 +288,7 @@ path = os.getcwd() + '/data/startup_data'
 if not os.path.exists(path):
     os.makedirs(path)
 
-df_startups = df_unique[df_unique.incyear == 2010].iloc[0:4] # change for the hole year
+df_startups = df_unique[df_unique.incyear == 2010] # change for the hole year
 log = initialize_log()
 
 dict_ini = {'ID': [],'Year': [], 'Visited_link': [], 'Name_Path':[], 'Text': []}
