@@ -293,8 +293,7 @@ if not os.path.exists(path):
 # Select Public companies which IPO is less or equal to 2010 or with no IPO date
 #df_public = data[(data.ipoyear <= 2010) | (pd.isna(data.ipoyear))].iloc[0:3]
 
-df_public = data[(data.ipoyear <= 2010)].iloc[0:1000]
-
+df_public = data[(data.ipoyear <= 2010)].sample(n=1000, random_state=1) ### Sample of 1000 companies
 year_selected = 2010  ### Select year
 
 log = initialize_log()
