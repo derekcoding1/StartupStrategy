@@ -1,6 +1,6 @@
 # Prediction
 ## Goal
-Once we get the strategy score, we are able to build inference models to test the correlation between our proposed strategy score (independent variable) and startups performance indicators (dependent variables), which therefore allow us to evaluate our strategy score.
+Once we get the strategy score, we are able to build inference models to test the correlation between our proposed strategy score (independent variable) and startups performance indicators (dependent variables), which therefore allows us to evaluate our strategy score.
 
 ## To-do list
 
