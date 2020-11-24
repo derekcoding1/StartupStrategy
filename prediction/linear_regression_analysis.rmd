@@ -1,0 +1,204 @@
+---
+title: "Linear Regression Analysis"
+author: "Wanzhi Li"
+date: "11/23/2020"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r message=FALSE}
+library(RMySQL)
+library(aod)
+library(ggplot2)
+library(ggpubr)
+library(pscl)
+#library(starpolish)
+#library(starpolishr)
+library(stargazer)
+library(dplyr)
+library(lfe)
+library(lubridate)
+#source("utils/binscatter.R")
+#source("utils/utils.R") 
+#source("utils/star_panel.R") 
+```
+
+## Linear Regression
+
+This document shows the linear regression analysis on relationships between dependent variables and strategy scores. Data are only from 2011.
+
+### Load Data
+```{r load data, cache=TRUE}
+data = read.csv('prediction_df.csv')
+```
+
+```{r}
+myvars <- c("X", "seed_founding", "firstrounds_founding","has_ipo",
+            "ipo_value","has_tradesale","tradesale_value","tfidf_score",
+            "word2vec_score","BERT_score")
+model_data = data[myvars]
+head(model_data)
+```
+
+```{r data_frame}
+summary(model_data)
+```
+
+### Correlation among scores
+```{r correlation, results = "asis"}
+correlation <- cor(model_data[,c("tfidf_score","word2vec_score","BERT_score")])
+stargazer(correlation, title = "Score Correlation Table", type = 'html', align = TRUE)
+```
+
+
+### Linear model: seed funding
+
+#### baisc linear regression
+```{r model1} 
+#stargazer(data)
+seed_tfidf <- lm(seed_founding ~ tfidf_score, data=model_data)
+seed_word2vec <- lm(seed_founding ~ word2vec_score, data=model_data)
+seed_BERT <- lm(seed_founding ~ BERT_score, data=model_data)
+```
+
+
+```{r output_table_seed1, results = "asis"}
+stargazer(seed_tfidf,seed_word2vec,seed_BERT,title="Linear Regression: seed funding", align=TRUE,type = 'html')
+```
+
+
+```{r viz1, message=FALSE}
+p1 <- ggplot(model_data, aes(x = tfidf_score, y = seed_founding)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm") + labs(y = "Seed Funding (Million Dollors)")
+p2 <- ggplot(model_data, aes(x = word2vec_score, y = seed_founding)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm")+ labs(y = "Seed Funding (Million Dollors)")
+p3 <- ggplot(model_data, aes(x = BERT_score, y = seed_founding)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm")+ labs(y = "Seed Funding (Million Dollors)")
+
+figure <- ggarrange(p1,p2,p3,nrow = 1)
+annotate_figure(figure,
+               top = text_grob("Linear Regression: seed funding", color = "black", face = "bold", size = 14))
+```
+
+#### try to get rid of 0 values in dependent variables
+```{r model2}
+seed_tfidf <- lm(seed_founding ~ tfidf_score, data=model_data[which(model_data$seed_founding>0),])
+seed_word2vec <- lm(seed_founding ~ word2vec_score, data=model_data[which(model_data$seed_founding>0),])
+seed_BERT <- lm(seed_founding ~ BERT_score, data=model_data[which(model_data$seed_founding>0),])
+```
+
+```{r output_table_seed2, results = "asis"}
+stargazer(seed_tfidf,seed_word2vec,seed_BERT,title="Linear Regression: seed funding (remove 0 values)", align=TRUE,type = 'html')
+```
+
+```{r viz2, message=FALSE}
+p1 <- ggplot(model_data[which(model_data$seed_founding>0),], aes(x = tfidf_score, y = seed_founding)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm")
+p2 <- ggplot(model_data[which(model_data$seed_founding>0),], aes(x = word2vec_score, y = seed_founding)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm")
+p3 <- ggplot(model_data[which(model_data$seed_founding>0),], aes(x = BERT_score, y = seed_founding)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm")
+
+figure <- ggarrange(p1,p2,p3,nrow = 1)
+annotate_figure(figure,
+               top = text_grob("Linear Regression: seed funding (remove 0 values)", color = "black", face = "bold", size = 14))
+```
+
+
+### Linear model: first rounds founding
+```{r model3} 
+#stargazer(data)
+first_tfidf <- lm(firstrounds_founding ~ tfidf_score, data=model_data)
+first_word2vec <- lm(firstrounds_founding ~ word2vec_score, data=model_data)
+first_BERT <- lm(firstrounds_founding ~ BERT_score, data=model_data)
+```
+
+```{r output_table3, results = "asis", message=FALSE}
+stargazer(first_tfidf,first_word2vec,first_BERT,title="Linear Regression: First rounds founding", align=TRUE,type = 'html')
+```
+
+```{r viz3, message=FALSE}
+p1 <- ggplot(model_data, aes(x = tfidf_score, y = firstrounds_founding)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm")
+p2 <- ggplot(model_data, aes(x = word2vec_score, y = firstrounds_founding)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm")
+p3 <- ggplot(model_data, aes(x = BERT_score, y = firstrounds_founding)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm")
+
+figure <- ggarrange(p1,p2,p3,nrow = 1)
+annotate_figure(figure,
+               top = text_grob("Linear Regression: First rounds founding", color = "black", face = "bold", size = 14))
+```
+
+
+### Linear model: Binary ipo
+```{r model4} 
+#stargazer(data)
+ipo_tfidf <- lm(has_ipo ~ tfidf_score, data=model_data)
+ipo_word2vec <- lm(has_ipo ~ word2vec_score, data=model_data)
+ipo_BERT <- lm(has_ipo ~ BERT_score, data=model_data)
+```
+
+
+```{r output_table4, results = "asis", message=FALSE}
+stargazer(ipo_tfidf,ipo_word2vec,ipo_BERT,title="Linear Regression: Has IPO (binary)", align=TRUE,type = 'html')
+```
+
+```{r viz4, message=FALSE}
+p1 <- ggplot(model_data, aes(x = tfidf_score, y = has_ipo)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm")
+p2 <- ggplot(model_data, aes(x = word2vec_score, y = has_ipo)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm")
+p3 <- ggplot(model_data, aes(x = BERT_score, y = has_ipo)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm")
+
+figure <- ggarrange(p1,p2,p3,nrow = 1)
+annotate_figure(figure,
+               top = text_grob("Linear Regression: Has IPO (Binary)", color = "black", face = "bold", size = 14))
+```
+
+### Linear model: Binary Tradesale
+```{r model5} 
+#stargazer(data)
+trade_tfidf <- lm(has_tradesale ~ tfidf_score, data=model_data)
+trade_word2vec <- lm(has_tradesale ~ word2vec_score, data=model_data)
+trade_BERT <- lm(has_tradesale ~ BERT_score, data=model_data)
+```
+
+
+```{r output_table5, results = "asis", message=FALSE}
+stargazer(trade_tfidf,trade_word2vec,trade_BERT,title="Linear Regression: Has Trade Sale (binary)", align=TRUE,type = 'html')
+```
+
+```{r viz5, message=FALSE}
+p1 <- ggplot(model_data, aes(x = tfidf_score, y = has_tradesale)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm")
+p2 <- ggplot(model_data, aes(x = word2vec_score, y = has_tradesale)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm")
+p3 <- ggplot(model_data, aes(x = BERT_score, y = has_tradesale)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm")
+
+figure <- ggarrange(p1,p2,p3,nrow = 1)
+annotate_figure(figure,
+               top = text_grob("Linear Regression: Has Trade Sale (Binary)", color = "black", face = "bold", size = 14))
+```
