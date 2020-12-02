@@ -202,3 +202,72 @@ figure <- ggarrange(p1,p2,p3,nrow = 1)
 annotate_figure(figure,
                top = text_grob("Linear Regression: Has Trade Sale (Binary)", color = "black", face = "bold", size = 14))
 ```
+
+## All Year Data
+
+```{r load data2, cache=TRUE}
+All_tfidf = read.csv('/Users/liwangzhi/Documents/GitHub/StartupStrategy/data/TFIDF_with_var.csv')
+```
+
+```{r edav}
+head(All_tfidf)
+```
+#### Consider score year and city
+
+```{r linear regression}
+gr.reg1 = felm(seed_founding ~ Strat_score|0|0|0, data=All_tfidf)
+gr.reg2 = felm(seed_founding ~ Strat_score|score_year|0|score_year, data=All_tfidf)
+gr.reg3 = felm(seed_founding ~ Strat_score|score_year+portfoliocompanycity|0|
+                 score_year+portfoliocompanycity, data=All_tfidf)
+#gr.reg4 = felm(seed_founding ~ Strat_score|0|0|0, data=All_tfidf)
+```
+
+```{r output, results = "asis", message=FALSE}
+stargazer(gr.reg1,gr.reg2,gr.reg3,
+          column.labels=c("OLS","OLS","OLS"),
+          add.lines=list(
+            c("Score Year F.E.","No","Yes","Yes"),
+            c("City F.E.","No","No","Yes")
+          ),
+          keep=c("Strat_score"),
+          title="Linear Regression: seed founding", 
+          align=TRUE,type = 'html')
+```
+
+#### Consider founding year and state
+
+```{r linear regression2}
+gr.reg4 = felm(seed_founding ~ Strat_score|0|0|0, data=All_tfidf)
+gr.reg5 = felm(seed_founding ~ Strat_score|incyear|0|incyear, data=All_tfidf)
+gr.reg6 = felm(seed_founding ~ Strat_score|incyear+portfoliocompanystatecounty|0|
+                 score_year+portfoliocompanystatecounty, data=All_tfidf)
+#gr.reg7 = glm(seed_founding ~ Strat_score + as.factor(score_year),data = All_tfidf,family="binomial")
+#gr.reg4 = felm(seed_founding ~ Strat_score|0|0|0, data=All_tfidf)
+```
+
+```{r output2, results = "asis", message=FALSE}
+stargazer(gr.reg4, gr.reg5, gr.reg6,
+          column.labels=c("OLS","OLS","OLS"),
+          add.lines=list(
+            c("Founding Year F.E.","No","Yes","Yes"),
+            c("State F.E.","No","No","Yes")
+          ),
+          keep=c("Strat_score"),
+          title="Linear Regression: seed founding", 
+          align=TRUE,type = 'html')
+```
+
+```{r logistic regression}
+gr.reg8 = glm(has_ipo ~ Strat_score, data = All_tfidf)
+#gr.reg8 = glm(has_ipo ~ Strat_score + as.factor(score_year), data = All_tfidf)
+```
+
+```{r output3, results = "asis", message=FALSE}
+stargazer(gr.reg8,
+          title="Logistic Regression: Has IPO", align=TRUE,type = 'html')
+```
+
+#### next step
+
+- normalize/standardize dependent variable
+- add industry into consideration
