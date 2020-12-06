@@ -1,0 +1,251 @@
+---
+title: "performance Prediction"
+author: "Wanzhi"
+date: "12/6/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r message=FALSE}
+library(RMySQL)
+library(aod)
+library(ggplot2)
+library(ggpubr)
+library(pscl)
+library(stargazer)
+library(dplyr)
+library(lfe)
+library(lubridate)
+```
+
+## Linear Regression
+
+This document shows the linear regression analysis on relationships between dependent variables and strategy scores. Data are only from 2011.
+
+### Load Data
+```{r load data}
+data = read.csv('/Users/liwangzhi/Documents/GitHub/StartupStrategy/data/prediction_df_1206.csv')
+```
+
+```{r show data}
+head(data, 3)
+```
+
+```{r data_frame}
+summary(data)
+```
+
+## Seed Funding
+
+```{r seed funding}
+gr.reg1 = felm(seed_founding ~ Strat_score|0|0|0, data=data)
+gr.reg2 = felm(seed_founding ~ Strat_score|score_year|0|score_year, data=data)
+gr.reg3 = felm(seed_founding ~ Strat_score|score_year+portfoliocompanycity|0|
+                 score_year+portfoliocompanycity, data=data)
+gr.reg4 = felm(seed_founding ~ Strat_score|score_year+portfoliocompanycity 
+               +industryclassification|0|score_year+portfoliocompanycity+
+                 industryclassification, data=data)
+```
+
+```{r output, results = "asis", message=FALSE}
+stargazer(gr.reg1,gr.reg2,gr.reg3,gr.reg4,
+          column.labels=c("OLS","OLS","OLS","OLS"),
+          add.lines=list(
+            c("Score Year F.E.","No","Yes","Yes","Yes"),
+            c("City F.E.","No","No","Yes","Yes"),
+            c("Industry F.E.","No","No","No","Yes")
+          ),
+          keep=c("Strat_score"),
+          title="Linear Regression: Seed funding", 
+          align=TRUE,type = 'html')
+```
+
+```{r log_seed}
+gr.reg2_1 = felm(log_seed ~ Strat_score|0|0|0, data=data)
+gr.reg2_2 = felm(log_seed ~ Strat_score|score_year|0|score_year, data=data)
+gr.reg2_3 = felm(log_seed ~ Strat_score|score_year+portfoliocompanycity|0|
+                 score_year+portfoliocompanycity, data=data)
+gr.reg2_4 = felm(log_seed ~ Strat_score|score_year+portfoliocompanycity 
+               +industryclassification|0|score_year+portfoliocompanycity+
+                 industryclassification, data=data)
+```
+
+```{r output2, results = "asis", message=FALSE}
+stargazer(gr.reg2_1,gr.reg2_2,gr.reg2_3,gr.reg2_4,
+          column.labels=c("OLS","OLS","OLS","OLS"),
+          add.lines=list(
+            c("Score Year F.E.","No","Yes","Yes","Yes"),
+            c("City F.E.","No","No","Yes","Yes"),
+            c("Industry F.E.","No","No","No","Yes")
+          ),
+          keep=c("Strat_score"),
+          title="Linear Regression: Log(Seed founding + 1)", 
+          align=TRUE,type = 'html')
+```
+
+```{r log_seed_zero}
+gr.reg3_1 = felm(log_seed_zero ~ Strat_score|0|0|0, data=data)
+gr.reg3_2 = felm(log_seed_zero ~ Strat_score|score_year|0|score_year, data=data)
+gr.reg3_3 = felm(log_seed_zero ~ Strat_score|score_year+portfoliocompanycity|0|
+                 score_year+portfoliocompanycity, data=data)
+gr.reg3_4 = felm(log_seed_zero ~ Strat_score|score_year+portfoliocompanycity 
+               +industryclassification|0|score_year+portfoliocompanycity+
+                 industryclassification, data=data)
+```
+
+```{r output3, results = "asis", message=FALSE}
+stargazer(gr.reg3_1,gr.reg3_2,gr.reg3_3,gr.reg3_4,
+          column.labels=c("OLS","OLS","OLS","OLS"),
+          add.lines=list(
+            c("Score Year F.E.","No","Yes","Yes","Yes"),
+            c("City F.E.","No","No","Yes","Yes"),
+            c("Industry F.E.","No","No","No","Yes")
+          ),
+          keep=c("Strat_score"),
+          title="Linear Regression: Log seed founding (drop zeros)", 
+          align=TRUE,type = 'html')
+```
+
+```{r log_seed plotting,message=FALSE}
+p1 <- ggplot(data, aes(x = Strat_score, y = seed_founding)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm")
+p2 <- ggplot(data, aes(x = Strat_score, y = log_seed)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm")
+p3 <- ggplot(data, aes(x = Strat_score, y = log_seed_zero)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "lm")
+
+figure <- ggarrange(p1,p2,p3,nrow = 1)
+annotate_figure(figure,
+               top = text_grob("Strategy Score with Seed funding, Log Seed funding, \n and Log Seed funding (drop zeros)", color = "black", face = "bold", size = 14))
+```
+
+## Logistic Regression
+
+```{r has_seed}
+gr.reg4_1 = glm(has_seed ~ Strat_score, data = data)
+gr.reg4_2 = glm(has_ipo ~ Strat_score, data = data)
+gr.reg4_3 = glm(has_tradesale ~ Strat_score, data = data)
+```
+
+```{r output4, results = "asis", message=FALSE}
+stargazer(gr.reg4_1,gr.reg4_2, gr.reg4_3,
+          title="Logistic Regression: Has Seed, Has IPO, and Has Trade sales", align=TRUE,type = 'html')
+```
+
+```{r logistic plotting, message=FALSE}
+p4 <- ggplot(data, aes(x = Strat_score, y = has_seed)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "glm")
+p5 <- ggplot(data, aes(x = Strat_score, y = has_ipo)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "glm")
+p6 <- ggplot(data, aes(x = Strat_score, y = has_tradesale)) + 
+  geom_point(alpha = 0.5) +
+  stat_smooth(method = "glm")
+
+figure <- ggarrange(p4,p5,p6,nrow = 1)
+annotate_figure(figure,
+               top = text_grob("Strategy Score with Has Seed Funding,\n Has IPO, and Has Trade Sales", 
+                               color = "black", face = "bold", size = 14))
+```
+
+## IPO value
+
+```{r log_ipo}
+gr.reg5_1 = felm(log_ipo ~ Strat_score|0|0|0, data=data)
+gr.reg5_2 = felm(log_ipo ~ Strat_score|score_year|0|score_year, data=data)
+gr.reg5_3 = felm(log_ipo ~ Strat_score|score_year+portfoliocompanycity|0|
+                 score_year+portfoliocompanycity, data=data)
+gr.reg5_4 = felm(log_ipo ~ Strat_score|score_year+portfoliocompanycity 
+               +industryclassification|0|score_year+portfoliocompanycity+
+                 industryclassification, data=data)
+```
+
+```{r output5, results = "asis", message=FALSE}
+stargazer(gr.reg5_1,gr.reg5_2,gr.reg5_3,gr.reg5_4,
+          column.labels=c("OLS","OLS","OLS","OLS"),
+          add.lines=list(
+            c("Score Year F.E.","No","Yes","Yes","Yes"),
+            c("City F.E.","No","No","Yes","Yes"),
+            c("Industry F.E.","No","No","No","Yes")
+          ),
+          keep=c("Strat_score"),
+          title="Linear Regression: Log(IPO value + 1)", 
+          align=TRUE,type = 'html')
+```
+
+```{r log_ipo_zero, message=FALSE, warning=FALSE}
+gr.reg6_1 = felm(log_ipo_zero ~ Strat_score|0|0|0, data=data)
+gr.reg6_2 = felm(log_ipo_zero ~ Strat_score|score_year|0|score_year, data=data)
+gr.reg6_3 = felm(log_ipo_zero ~ Strat_score|score_year+portfoliocompanycity|0|
+                 score_year+portfoliocompanycity, data=data)
+gr.reg6_4 = felm(log_ipo_zero ~ Strat_score|score_year+portfoliocompanycity 
+               +industryclassification|0|score_year+portfoliocompanycity+
+                 industryclassification, data=data)
+```
+
+```{r output6, results = "asis", message=FALSE}
+stargazer(gr.reg6_1,gr.reg6_2,gr.reg6_3,gr.reg6_4,
+          column.labels=c("OLS","OLS","OLS","OLS"),
+          add.lines=list(
+            c("Score Year F.E.","No","Yes","Yes","Yes"),
+            c("City F.E.","No","No","Yes","Yes"),
+            c("Industry F.E.","No","No","No","Yes")
+          ),
+          keep=c("Strat_score"),
+          title="Linear Regression: Log IPO value (drop zeros)", 
+          align=TRUE,type = 'html')
+```
+
+## First Rounds Funding
+
+```{r first rounds funding}
+gr.reg7_1 = felm(firstrounds_founding ~ Strat_score|0|0|0, data=data)
+gr.reg7_2 = felm(firstrounds_founding ~ Strat_score|score_year|0|score_year, data=data)
+gr.reg7_3 = felm(firstrounds_founding ~ Strat_score|score_year+portfoliocompanycity|0|
+                 score_year+portfoliocompanycity, data=data)
+gr.reg7_4 = felm(firstrounds_founding ~ Strat_score|score_year+portfoliocompanycity 
+               +industryclassification|0|score_year+portfoliocompanycity+
+                 industryclassification, data=data)
+```
+
+```{r output7, results = "asis", message=FALSE}
+stargazer(gr.reg7_1,gr.reg7_2,gr.reg7_3,gr.reg7_4,
+          column.labels=c("OLS","OLS","OLS","OLS"),
+          add.lines=list(
+            c("Score Year F.E.","No","Yes","Yes","Yes"),
+            c("City F.E.","No","No","Yes","Yes"),
+            c("Industry F.E.","No","No","No","Yes")
+          ),
+          keep=c("Strat_score"),
+          title="Linear Regression: First Rounds of funding", 
+          align=TRUE,type = 'html')
+```
+```{r log first funding}
+gr.reg8_1 = felm(log_first_rounds ~ Strat_score|0|0|0, data=data)
+gr.reg8_2 = felm(log_first_rounds ~ Strat_score|score_year|0|score_year, data=data)
+gr.reg8_3 = felm(log_first_rounds ~ Strat_score|score_year+portfoliocompanycity|0|
+                 score_year+portfoliocompanycity, data=data)
+gr.reg8_4 = felm(log_first_rounds ~ Strat_score|score_year+portfoliocompanycity 
+               +industryclassification|0|score_year+portfoliocompanycity+
+                 industryclassification, data=data)
+```
+
+```{r output8, results = "asis", message=FALSE}
+stargazer(gr.reg8_1,gr.reg8_2,gr.reg8_3,gr.reg8_4,
+          column.labels=c("OLS","OLS","OLS","OLS"),
+          add.lines=list(
+            c("Score Year F.E.","No","Yes","Yes","Yes"),
+            c("City F.E.","No","No","Yes","Yes"),
+            c("Industry F.E.","No","No","No","Yes")
+          ),
+          keep=c("Strat_score"),
+          title="Linear Regression: Log (First Rounds of funding + 1)", 
+          align=TRUE,type = 'html')
+```

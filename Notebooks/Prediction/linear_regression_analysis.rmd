@@ -260,6 +260,8 @@ stargazer(gr.reg4, gr.reg5, gr.reg6,
 ```{r logistic regression}
 gr.reg8 = glm(has_ipo ~ Strat_score, data = All_tfidf)
 #gr.reg8 = glm(has_ipo ~ Strat_score + as.factor(score_year), data = All_tfidf)
+library(pROC)
+resLroc <- roc(gr.reg8)
 ```
 
 ```{r output3, results = "asis", message=FALSE}
@@ -271,3 +273,14 @@ stargazer(gr.reg8,
 
 - normalize/standardize dependent variable
 - add industry into consideration
+
+
+```{r logistic regression2}
+gr.reg7 = glm(has_ipo ~ Strat_score + as.factor(score_year) + as.factor(portfoliocompanycity), data = All_tfidf)
+#gr.reg8 = glm(has_ipo ~ Strat_score + as.factor(score_year), data = All_tfidf)
+```
+
+```{r output4, results = "asis", message=FALSE}
+stargazer(gr.reg7,
+          title="Logistic Regression: Has IPO", align=TRUE,type = 'html')
+```
