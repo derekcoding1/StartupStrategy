@@ -28,6 +28,11 @@ Please see __Progress_Report__ for our progress reporting along the way.
 
 ## Our goal
 
+The purpose of this project is to develop a new analysis of the strategy of firms using text-based machine learning.
+
+The key insight is that distance in the initial statements made by startup companies can be partially indicative of their strategic positioning to each other, and this, in turn, could be an explicative factor of the future performance of the startup.
+
+The expected outcome of the project will be reproducible code and the improvement of the early version of the paper “Measuring Founding Strategy.” by Prof. Jorge Guzman and Aishen Li, which is the base of this project.
 
 
 ## Data
