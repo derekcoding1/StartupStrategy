@@ -43,3 +43,20 @@ The expected outcome of the project will be reproducible code and the improvemen
 
 
 ## Reference
+
+Anthony, C., Nelson, A. J. & Tripsas, M. (2016), ‘“who are you?. . . i really wanna know”: Product\
+meaning and competitive positioning in the nascent synthesizer industry’, Strategy Science\
+1(3), 163–183.
+Felin, T., Gambardella, A., Stern, S. & Zenger, T. (2019), Lean startup revisited, Technical Report
+26278, Medium.\
+URL: https://medium.com/@teppofelin/lean-startup-revisited-c81fb8719614
+Gans, J., Scott, E. & Stern, S. (2019), Entrepreneurial Strategy, Manuscript.\
+Guzman, J., & Li, A. (2019). Measuring Founding Strategy. Available at SSRN 3489585.\
+Guzman, J. & Stern, S. (2015), ‘Where is silicon valley?’, Science 347(6222), 606–609.\
+Guzman, J. & Stern, S. (2019), ‘The state of american entrepreneurship: New estimates of the
+quantity and quality of entrepreneurship for 32 us states, 1988-2014’, American Economic Journal:
+Economic Policy .\
+Porter, M. E. (1980), Competitive strategy: Techniques for analyzing industries and competitors, Simon and Schuster.\
+Porter, M. E. (1996), ‘What is strategy?’, Harvard Business Review 6(74), 61–78.\
+Reis, E. (2011), The Lean Startup: How Today’s Entrepreneurs Use Continuous Innovation to
+Create Radically Successful Businesses, Currency.
